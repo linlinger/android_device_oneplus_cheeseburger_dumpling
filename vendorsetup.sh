@@ -39,15 +39,6 @@
 	export OF_ENABLE_LPTOOLS=1
 
 	## 硬件功能设定
-	# 没有绿色led
-	# export OF_USE_GREEN_LED=0
-	# 关闭闪光灯功能
-	export OF_FLASHLIGHT_ENABLE=1
-	# 自定义闪光灯路径，修复闪光灯
-	export OF_FL_PATH1=/sys/class/leds/torch-light0
-	export OF_FL_PATH2=/sys/class/leds/torch-light1
-	# 橙狐只支持两个闪光灯路径变量，但是这个手机有3个,其实有一个就行了，这个无实际用途
-	# export OF_FL_PATH3=/sys/class/leds/torch-light2
 
 	## 界面显示设定
 	# 设置屏幕高度，状态栏高度，状态栏左右边距
@@ -59,43 +50,16 @@
 	# 禁止禁用导航栏
 	export OF_ALLOW_DISABLE_NAVBAR=0
 
-	## 使刷机包兼容红米10X 5G和红米10X Pro
-	# 使红米10X 5G和红米10X Pro都能刷入橙狐zip卡刷包
-	#export TARGET_DEVICE_ALT="atom, bomb"
-	# 使橙狐可以刷入具有机型检测限制为红米10X 5G或者红米10X Pro的zip卡刷包，与TARGET_OTA_ASSERT_DEVICE冲突
-	export OF_TARGET_DEVICES="cheesebuger,dumpling"
+	## 使刷机包兼容一加5和一加5t
+	# 使一加5和一加5t都能刷入橙狐zip卡刷包
+	export TARGET_DEVICE_ALT="cheesebuger,dumpling"
+	# 使橙狐可以刷入具有机型检测限制为一加5或者一加5t的zip卡刷包，与TARGET_OTA_ASSERT_DEVICE冲突
+	# export OF_TARGET_DEVICES="cheesebuger,dumpling"
 
-	## 添加橙狐特殊处理
-	# 设定recovery、system、vendor、boot分区路径
-	export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
-	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
-	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-	export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
-
-	# 避免在已加密设备上应用强制加密补丁
-	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
-	# 跳过FBE解密流程（防止卡在橙狐LOGO或Redmi/Mi LOGO界面）
-	# export OF_SKIP_FBE_DECRYPTION=1
-	# 当ROM大于等于指定安卓SDK等级时，跳过FBE解密流程
-	# export OF_SKIP_FBE_DECRYPTION_SDKVERSION=33
-	# 在MIUI OTA还原期间尝试解密内部存储（而不是错误退出）
-	export OF_OTA_RES_DECRYPT=1
-	# 防止橙狐在解密后重新运行自启动进程
-	export OF_NO_RELOAD_AFTER_DECRYPTION=1
-	# 防止用户在不使用metadata加密的ROM中重复被metadata装载错误提示刷屏
-	export OF_FBE_METADATA_MOUNT_IGNORE=1
 	# 手动刷入OTA增量包时尝试进入OpenRecoveryScript模式完成更新
 	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-	# 尝试处理AVB2.0，防止橙狐被官方recovery替换，实测此机型无效
-	# export OF_PATCH_AVB20=1
-	# 关闭修改橙狐启动画面功能，这个功能可能会导致重启无限卡MI
-	export OF_NO_SPLASH_CHANGE=1
 	# 禁用橙狐内置的magisk菜单
 	export FOX_DELETE_MAGISK_ADDON=1
-	# 使用指定的magisk
-	export FOX_USE_SPECIFIC_MAGISK_ZIP="$HOME/Magisk.zip"
-	# 使用指定的magisk版本号，由于magisk 23+使用了新的包装形式，文件路径改变了，橙狐无法获取正确的版本
-	export MAGISK_VER=25.2
 	# 修复部分设备或者rom的解密问题
 	export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
 
