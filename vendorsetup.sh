@@ -46,8 +46,7 @@
 	# 由于橙狐默认屏幕比例是16：9,所以应设置屏幕高度为屏幕比例换算成n：9之后，n*120
 	export OF_SCREEN_H=2160
 	export OF_STATUS_H=59
-	export OF_STATUS_INDENT_LEFT=90
-	export OF_STATUS_INDENT_RIGHT=90
+
 	# 禁止禁用导航栏
 	export OF_ALLOW_DISABLE_NAVBAR=0
 
