@@ -134,9 +134,9 @@
 		<string name="wipe_sel_confirm">清除选定分区数据</string>
 		<string name="wiping_part">正在清除分区...</string>
 		<string name="wipe_complete">清除完成</string>
-		<string name="format_data_hdr">格式化数据分区</string>
-		<string name="format_data_btn">格式化数据分区</string>
-		<string name="format_data_ptr1">格式化数据分区将清除您的所有应用、</string>
+		<string name="format_data_hdr">格式化Data分区</string>
+		<string name="format_data_btn">格式化Data分区</string>
+		<string name="format_data_ptr1">格式化Data分区将清除您的所有应用、</string>
 		<string name="format_data_ptr2">备份、图片、视频、媒体文件，并</string>
 		<string name="format_data_ptr3">移除内部储存的加密。</string>
 		<string name="format_data_adopted">包括已合并存储</string>
@@ -773,7 +773,7 @@
 		
 		<string name="menu_btn">菜单</string>
 		
-		<string name="data_backup">数据</string>
+		<string name="data_backup">Data</string>
 		<string name="autostorage">存储</string>
 		<string name="install_reboot">将在 %tw_sleep% 秒内重启</string>
 		<string name="cancel_reboot_btn">取消重启</string>
