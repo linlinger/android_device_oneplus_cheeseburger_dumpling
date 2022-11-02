@@ -5,7 +5,8 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# 关于橙狐变量详见 OrangeFox_10/fox_10.0/vendor/recovery/orangefox_build_vars.txt
+# 关于橙狐变量详见 OrangeFox_10/fox_10.0/vendor/recovery/
+
 
 	export LC_ALL="C"
 	export ALLOW_MISSING_DEPENDENCIES=true
@@ -53,13 +54,11 @@
 	## 使刷机包兼容一加5和一加5t
 	# 使一加5和一加5t都能刷入橙狐zip卡刷包
 	export TARGET_DEVICE_ALT="cheesebuger,dumpling"
-	# 使橙狐可以刷入具有机型检测限制为一加5或者一加5t的zip卡刷包，与TARGET_OTA_ASSERT_DEVICE冲突
-	# export OF_TARGET_DEVICES="cheesebuger,dumpling"
+
 
 	# 手动刷入OTA增量包时尝试进入OpenRecoveryScript模式完成更新
 	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-	# 禁用橙狐内置的magisk菜单
-	export FOX_DELETE_MAGISK_ADDON=1
+
 	# 修复部分设备或者rom的解密问题
 	export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
 
