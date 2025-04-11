@@ -21,7 +21,7 @@
 	# 设置版本号为日期
 	export FOX_MAINTAINER_PATCH_VERSION=$(date +%y%m%d)
 	# 当你需要标记出这个recovery是一个特殊版本时使用
-	export FOX_VARIANT=5/5TUnifid
+	export FOX_VARIANT=DSP_non_DSP_Unifid
 
 	## 添加功能
 	# 使用完整版getprop命令
