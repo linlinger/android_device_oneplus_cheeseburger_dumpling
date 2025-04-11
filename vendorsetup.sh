@@ -8,12 +8,13 @@
 
 # Wehter to enable dynamic partition
     export ONEPLUS_DYNAMIC=true
-
+	export IS_5T=true
+# OrangeFox build props
 	export TW_DEFAULT_LANGUAGE="zh_CN"
 	export LC_ALL="C"
 	export ALLOW_MISSING_DEPENDENCIES=true
 
-	echo -e "\x1b[96mmondrian: 开始添加OrangeFox Vars...\x1b[m"
+	echo -e "\x1b[96mcheeseburger_dumpling: 开始添加OrangeFox Vars...\x1b[m"
 	## 构建信息
 	# 设置显示在关于页面里的维护人员名称
 	export OF_MAINTAINER=天拖保全丁文元
@@ -75,7 +76,11 @@
 	## 界面显示设定
 # 	export OF_STATUS_INDENT_LEFT="48"
 # 	export OF_STATUS_INDENT_RIGHT="48"
-# 	export OF_SCREEN_H=2340
+	if [ "$IS_5T" = "true" ]; then
+		export OF_SCREEN_H="2160"
+	else
+		export OF_SCREEN_H="1920"
+	fi
 	# 禁止禁用导航栏
 	export OF_ALLOW_DISABLE_NAVBAR=0
 
