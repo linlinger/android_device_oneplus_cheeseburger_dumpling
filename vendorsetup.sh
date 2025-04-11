@@ -112,6 +112,8 @@
 	export OF_OPTIONS_LIST_NUM=9
 
 	F=$(find "device" -maxdepth 2 -name "cheeseburger_dumpling")
+	# 删除文件，以防高度应用失败（如果还是失败请手动修改该文件的高度）
+	rm "$F"/recovery/root/twres/splash.xml
 	# 修改启动画面背景色为#000000(黑色)
 	\cp -fp bootable/recovery/gui/theme/portrait_hdpi/splash.xml "$F"/recovery/root/twres/splash.xml
 	sed -i 's/value="#D34E38"/value="#000000"/g' "$F"/recovery/root/twres/splash.xml
