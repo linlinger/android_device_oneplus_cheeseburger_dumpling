@@ -11,6 +11,7 @@
 /vendor_image     emmc      /dev/block/bootdevice/by-name/vendor
 /persist          ext4      /dev/block/bootdevice/by-name/persist       flags=display="Persist";backup=1;fsflags="noatime,nosuid,nodev,barrier=1"
 /firmware         vfat      /dev/block/bootdevice/by-name/modem         flags=display="Firmware";mounttodecrypt;fsflags="ro"
+/frp                   emmc    /dev/block/bootdevice/by-name/frp        flags=display="Google Lock(FRP)";wipeingui
 /modem            emmc      /dev/block/bootdevice/by-name/modem         flags=backup=1;display="Modem"
 /bluetooth        emmc      /dev/block/bootdevice/by-name/bluetooth     flags=backup=1;subpartitionof=/modem
 /dsp              emmc      /dev/block/bootdevice/by-name/dsp           flags=backup=1;subpartitionof=/modem
