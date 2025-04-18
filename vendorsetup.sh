@@ -48,6 +48,7 @@
 	# 添加phhusson's lptools工具
 	export OF_ENABLE_LPTOOLS=1
 
+
 	## 添加橙狐特殊处理
     # 支持5/5T
     export TARGET_DEVICE_ALT="cheeseburger"
@@ -63,6 +64,11 @@
 	export FOX_RESET_SETTINGS=disabled
 	# 删除zip包里的AromaFM（有的设备用不了）
 	# export FOX_DELETE_AROMAFM=1
+
+
+    # 支持三方rom的OTA更新
+    export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
+    export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 
 	## 硬件功能设定
 	# 没有绿色led
@@ -86,7 +92,7 @@
 
 	## 调整刷入zip刷机包时刷机脚本要检测的相关属性
 # 	设置一个很老的build时间，用于解决某些ROM例如MIUI刷机脚本里的防回滚保护检测
-# 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
+ 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
 
 	# 为“快速备份”指定默认选择的分区
 	export OF_QUICK_BACKUP_LIST="/boot;/dtbo;"
@@ -102,6 +108,8 @@
 	# export MAGISK_VER=26.1
 	# 当修补recovery/boot镜像时，始终指示magiskboot v24+修补vbmeta标头（自动禁用avb验证？）
 # 	export FOX_PATCH_VBMETA_FLAG=1
+    # 格式化data后自动重新创建 /data/media/0
+    export OF_FORCE_CREATE_DATA_MEDIA_ON_FORMAT=1
 	# 在修复或格式化f2fs数据分区之前自动卸载绑定/sdcard
 	export OF_UNBIND_SDCARD_F2FS=1
 	# 设置默认时区为北京时间
